@@ -1,0 +1,33 @@
+-- Create a bonnet store database
+
+CREATE TABLE bonnets (id INTEGER PRIMARY KEY, color TEXT, price INTEGER, quantity INTEGER, aisle INTEGER, size TEXT, gender TEXT);
+
+INSERT INTO bonnets VALUES (1, "Pink", 3.99, 20, 3," Large", "Female");
+INSERT INTO bonnets VALUES (2, "Pink", 5.99, 10, 3," Small", "Female");
+INSERT INTO bonnets VALUES (3, "Pink", 7.99, 5, 17," Medium", "Female");
+INSERT INTO bonnets VALUES (4, "Blue", 2.99, 5, 16," Large", "Male");
+INSERT INTO bonnets VALUES (5, "Blue", 3.99, 20, 16," Large", "Female");
+INSERT INTO bonnets VALUES (6, "Light Blue",9.99, 7, 18," Medium", "Non Binary");
+INSERT INTO bonnets VALUES (7, "Rose Gold", 7.99, 12, 7," Large", "Female");
+INSERT INTO bonnets VALUES (8, "Rose Gold", 5.99, 14, 8," Small", "Male");
+INSERT INTO bonnets VALUES (9, "Green", 8.99, 18, 5," Medium", "Non Binary");
+INSERT INTO bonnets VALUES (10, "Orange", 1.99, 5, 9," Large", "Male");
+INSERT INTO bonnets VALUES (11, "Purple", 2.99, 9, 9," Small", "Non Binary");
+INSERT INTO bonnets VALUES (12, "Red",  6.99,7, 3," Medium", "Male");
+INSERT INTO bonnets VALUES (13, "Yellow", 4.99, 36, 3," Large", "Female");
+INSERT INTO bonnets VALUES (14, "White", 2.99, 18, 8," Large", "Non Binary");
+INSERT INTO bonnets VALUES (15, "Sand", 5.99, 20, 3," Small", "Male");
+
+
+
+--display the database ordered by price descending order.
+SELECT * FROM bonnets ORDER BY price DESC;
+
+-- What is the sum of the database price?
+SELECT SUM(price) FROM bonnets;
+
+--What are the most expensive bonnets?
+SELECT * FROM bonnets WHERE price < 4;
+
+--What bonnets are the least expensive?
+SELECT * FROM bonnets WHERE price < 4;
